@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    lab01:
+        build: ./
+        ports:
+               - "5000:80"
+        networks:
+           - demored
+        volumes:
+           - "vol01:/var/logs"
+networks:
+    demored:
+
+
+        
+     
