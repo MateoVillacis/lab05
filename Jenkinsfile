@@ -4,7 +4,7 @@ pipeline{
      // REGISTRY = "mvcitytech"
      // APPNAME = "Lab01"
      // IMAGE = "Lab01"
-     // DOCKER_HUB_LOGIN = credentials('dockerhub-mvcitytech')
+     // DOCKER_HUB_LOGIN = credentials('dockerhub-MateoVillacis')
     //  }
    stages {
    stage("Build Image"){
