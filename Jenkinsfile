@@ -4,7 +4,7 @@ pipeline{
          APPNAME = "lab01"
          IMAGE = "lab01"
          VERSION = 11
-         REGISTRY = "mvcitytech"
+         REGISTRY = "MVcitytech"
          DOCKER_HUB_LOGIN = credentials('dockerhub-MateoVillacis')
      
       }
