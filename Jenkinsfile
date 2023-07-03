@@ -3,7 +3,8 @@ pipeline{
       environment {
          APPNAME = "lab01"
          IMAGE = "lab01"
-         VERSION = 11
+         PORT = "8091"
+         VERSION = 12
          REGISTRY = "mvcitytech"
          DOCKER_HUB_LOGIN = credentials('dockerhub-MateoVillacis')
      
@@ -21,6 +22,13 @@ pipeline{
                sh 'docker push $REGISTRY/$APPNAME:$VERSION'
      } 
  }  
+         stage('Deploy Image'){
+            steps{
+               sh 'docker stop $APPNAME'
+               sh 'docker rm $APPNAME'
+               sh 'docker run -d --name $APPNAME -p PORT:80 $REGISTRY/$APPNAME:$VERSION'
+     } 
+ }
             }
   
   }
