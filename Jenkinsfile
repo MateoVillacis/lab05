@@ -13,7 +13,7 @@ pipeline{
   stage("Build Image"){
   steps{  
    sh "pwd"
-   //sh 'docker build -t $REGISTRY/$IMAGE:$VERSION .'
+   sh 'docker build -t $REGISTRY/$IMAGE:$VERSION .'
    }
 }
      // stage('Docker Push to Docker-hub'){
