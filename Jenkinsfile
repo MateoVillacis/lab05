@@ -10,12 +10,12 @@ pipeline{
      
       }
    stages {
-//   stage("Build Image"){
-  // steps{  
- //  sh "pwd"
-  // sh 'docker build -t $REGISTRY/$IMAGE:$VERSION .'
-  // }
-  // }
+  stage("Build Image"){
+  steps{  
+   sh "pwd"
+   sh 'docker build -t $REGISTRY/$IMAGE:$VERSION .'
+   }
+}
      // stage('Docker Push to Docker-hub'){
      //       steps{
      //          sh 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW'
